@@ -25,7 +25,7 @@
           Hello
         </h2>
         <div class="feedback__form">
-          <form>
+          <form action="">
             <h3>
               For business enquiries please use the form below
             </h3>
@@ -39,6 +39,7 @@
                 class="feedback__input"
                 autocomplete="off"
                 required
+                minlength="2"
               />
               <label
                 for="name"
@@ -54,6 +55,7 @@
                 class="feedback__input"
                 autocomplete="off"
                 required
+                minlength="4"
               />
               <label
                 for="company"
@@ -65,7 +67,6 @@
             <div class="feedback__input-container">
               <input
                 id="email"
-                type="text"
                 class="feedback__input"
                 autocomplete="off"
                 type="email"
@@ -101,7 +102,12 @@
               </label>
             </div>
             <div class="feedback__input-container">
-              <textarea name="message" id="message" rows="2"></textarea>
+              <textarea
+                name="message"
+                id="message"
+                rows="2"
+                required
+              ></textarea>
               <label
                 for="message"
                 class="feedback__label feedback__label_important"
@@ -110,7 +116,7 @@
               </label>
             </div>
             <div class="feedback__checkbox-container">
-              <input id="agreement" type="checkbox" required />
+              <input id="agreement" name="agreement" type="checkbox" required />
               <label for="agreement">
                 I accept <a href="#">Terms and Privacy Policy</a>
               </label>
@@ -122,6 +128,7 @@
         </div>
       </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.0.7/imask.min.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>

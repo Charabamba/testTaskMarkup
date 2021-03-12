@@ -15,6 +15,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  line-height: 120%;
 }
 .feedback::after {
   display: block;
@@ -111,7 +112,9 @@ body {
   position: relative;
 }
 .feedback__checkbox-container input {
-  display: none;
+  position: absolute;
+  z-index: -1;
+  height: 31px;
 }
 
 .feedback__checkbox-container label::before {
